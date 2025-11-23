@@ -1,19 +1,21 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
-  <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
-    <Nullable>enable</Nullable>
-    <ImplicitUsings>enable</ImplicitUsings>
-  </PropertyGroup>
 
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+	</PropertyGroup>
+
+	<!-- Eğer OfficeIMO projelerini solution içine alıyorsak PACKAGE kullanma! -->
 	<ItemGroup>
-		<ProjectReference Include="..\..\OfficeIMO-master\OfficeIMO.Excel\OfficeIMO.Excel.csproj" />
-		<ProjectReference Include="..\..\OfficeIMO-master\OfficeIMO.Pdf\OfficeIMO.Pdf.csproj" />
-		<ProjectReference Include="..\..\OfficeIMO-master\OfficeIMO.PowerPoint\OfficeIMO.PowerPoint.csproj" />
-		<ProjectReference Include="..\..\OfficeIMO-master\OfficeIMO.Visio\OfficeIMO.Visio.csproj" />
-		<ProjectReference Include="..\..\OfficeIMO-master\OfficeIMO.Word.Html\OfficeIMO.Word.Html.csproj" />
-		<ProjectReference Include="..\..\OfficeIMO-master\OfficeIMO.Word.Markdown\OfficeIMO.Word.Markdown.csproj" />
-		<ProjectReference Include="..\..\OfficeIMO-master\OfficeIMO.Word.Pdf\OfficeIMO.Word.Pdf.csproj" />
 		<ProjectReference Include="..\..\OfficeIMO-master\OfficeIMO.Word\OfficeIMO.Word.csproj" />
-
+		<ProjectReference Include="..\..\OfficeIMO-master\OfficeIMO.Excel\OfficeIMO.Excel.csproj" />
+		<ProjectReference Include="..\..\OfficeIMO-master\OfficeIMO.PowerPoint\OfficeIMO.PowerPoint.csproj" />
+		<ProjectReference Include="..\..\OfficeIMO-master\OfficeIMO.Pdf\OfficeIMO.Pdf.csproj" />
+		<ProjectReference Include="..\..\OfficeIMO-master\OfficeIMO.Visio\OfficeIMO.Visio.csproj" />
+		<ProjectReference Include="..\..\OfficeIMO-master\OfficeIMO.Word.Markdown\OfficeIMO.Word.Markdown.csproj" />
+		<ProjectReference Include="..\..\OfficeIMO-master\OfficeIMO.Word.Html\OfficeIMO.Word.Html.csproj" />
+		<ProjectReference Include="..\..\OfficeIMO-master\OfficeIMO.Word.Pdf\OfficeIMO.Word.Pdf.csproj" />
 	</ItemGroup>
+
 </Project>
