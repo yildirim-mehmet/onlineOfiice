@@ -1,0 +1,81 @@
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Threading.Tasks;
+using DocumentFormat.OpenXml.Packaging;
+using DocumentFormat.OpenXml.Spreadsheet;
+using OfficeIMO.Excel;
+using Xunit;
+
+namespace OfficeIMO.Tests {
+    /// <summary>
+    /// Tests for adding and persisting auto filters in Excel sheets.
+    /// </summary>
+    public partial class Excel {
+        [Fact]
+        public void Test_AddAutoFilterPersists() {
+            string filePath = Path.Combine(_directoryWithFiles, "AutoFilter.xlsx");
+            using (ExcelDocument document = ExcelDocument.Create(filePath)) {
+                ExcelSheet sheet = document.AddWorkSheet("Data");
+                sheet.CellValue(1, 1, "Name");
+                sheet.CellValue(1, 2, "Value");
+                sheet.CellValue(2, 1, "A");
+                sheet.CellValue(2, 2, 10d);
+                sheet.CellValue(3, 1, "B");
+                sheet.CellValue(3, 2, 20d);
+                Dictionary<uint, IEnumerable<string>> criteria = new Dictionary<uint, IEnumerable<string>> {
+                    { 0, new[] { "A" } }
+                };
+                sheet.AddAutoFilter("A1:B3", criteria);
+                document.Save();
+            }
+
+            using (ExcelDocument document = ExcelDocument.Load(filePath)) {
+                document.Save();
+            }
+
+            using (SpreadsheetDocument spreadsheet = SpreadsheetDocument.Open(filePath, false)) {
+                WorksheetPart wsPart = spreadsheet.WorkbookPart!.WorksheetParts.First();
+                AutoFilter? autoFilter = wsPart.Worksheet.Elements<AutoFilter>().FirstOrDefault();
+                Assert.NotNull(autoFilter);
+                Assert.NotNull(autoFilter!.Reference);
+                Assert.Equal("A1:B3", autoFilter.Reference!.Value);
+                FilterColumn? filterColumn = autoFilter.Elements<FilterColumn>().FirstOrDefault();
+                Assert.NotNull(filterColumn);
+                Filters? filters = filterColumn!.GetFirstChild<Filters>();
+                Assert.NotNull(filters);
+                Filter filter = filters!.Elements<Filter>().First();
+                Assert.NotNull(filter.Val);
+                Assert.Equal("A", filter.Val!.Value);
+            }
+        }
+
+        [Fact]
+        public async Task Test_AddAutoFilterConcurrent() {
+            string filePath = Path.Combine(_directoryWithFiles, "AutoFilter.Concurrent.xlsx");
+            using (ExcelDocument document = ExcelDocument.Create(filePath)) {
+                ExcelSheet sheet = document.AddWorkSheet("Data");
+                sheet.CellValue(1, 1, "Name");
+                sheet.CellValue(1, 2, "Value");
+                sheet.CellValue(2, 1, "A");
+                sheet.CellValue(2, 2, 10d);
+                sheet.CellValue(3, 1, "B");
+                sheet.CellValue(3, 2, 20d);
+
+                var tasks = Enumerable.Range(0, 5)
+                    .Select(_ => Task.Run(() => sheet.AddAutoFilter("A1:B3")))
+                    .ToArray();
+                await Task.WhenAll(tasks);
+                document.Save();
+            }
+
+            using (SpreadsheetDocument spreadsheet = SpreadsheetDocument.Open(filePath, false)) {
+                WorksheetPart wsPart = spreadsheet.WorkbookPart!.WorksheetParts.First();
+                AutoFilter? autoFilter = wsPart.Worksheet.Elements<AutoFilter>().FirstOrDefault();
+                Assert.NotNull(autoFilter);
+                Assert.NotNull(autoFilter!.Reference);
+                Assert.Equal("A1:B3", autoFilter.Reference!.Value);
+            }
+        }
+    }
+}
