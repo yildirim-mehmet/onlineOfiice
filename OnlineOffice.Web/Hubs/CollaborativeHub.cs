@@ -27,27 +27,24 @@ public class CollaborativeHub : Hub
             .SendAsync("UserJoined", userName, session?.ConnectedUsers.Count ?? 0);
     }
 
-    public async Task UpdateExcelCell(string sessionId, string sheetName, string cellAddress, string? value)
-    {
+    public async Task UpdateExcelCell(string sessionId, string sheetName, string cellAddress, object value) {
         var session = _service.GetExcelSession(sessionId);
         if (session == null) return;
 
         session.SyncLock.EnterWriteLock();
-        try
-        {
-            var sheet = session.Document.Workbook.Worksheets.FirstOrDefault(s => s.Name == sheetName);
-            if (sheet != null)
-            {
-                sheet.Cells[cellAddress].Value = value;
-                session.Document.Save(session.FilePath);
+        try {
+            var sheet = session.Document.Sheets
+                .FirstOrDefault(s => s.Name == sheetName);
+
+            if (sheet != null) {
+                var cell = sheet.GetCell(cellAddress);
+                cell.Value = value?.ToString();
+                session.Document.Save();
             }
-        }
-        finally
-        {
+        } finally {
             session.SyncLock.ExitWriteLock();
         }
 
-        // Diğer kullanıcılara bildir
         await Clients.OthersInGroup(sessionId)
             .SendAsync("CellUpdated", sheetName, cellAddress, value);
     }
