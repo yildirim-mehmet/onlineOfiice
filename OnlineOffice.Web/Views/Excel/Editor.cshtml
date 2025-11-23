@@ -1,0 +1,68 @@
+@model ExcelEditViewModel
+
+@{
+    ViewData["Title"] = "Excel Düzenle";
+}
+
+<h2>Excel Düzenle - @Model.FileName</h2>
+<p>Sayfa: <strong>@Model.SheetName</strong>, Satır: @Model.Rows, Sütun: @Model.Columns</p>
+
+<div class="table-responsive">
+    <table class="table table-bordered table-sm align-middle text-center" id="excel-grid">
+        <thead>
+            <tr>
+                <th></th>
+                @for (int c = 0; c < Model.Columns; c++)
+                {
+                    <th>@GetColumnName(c + 1)</th>
+                }
+            </tr>
+        </thead>
+        <tbody>
+        @for (int r = 0; r < Model.Rows; r++)
+        {
+            <tr>
+                <th class="bg-light">@(@r + 1)</th>
+                @for (int c = 0; c < Model.Columns; c++)
+                {
+                    var cellId = GetColumnName(c + 1) + (r + 1);
+                    <td>
+                        <input type="text"
+                               class="form-control form-control-sm excel-cell"
+                               data-row="@r"
+                               data-col="@c"
+                               data-address="@cellId"
+                               value="@Model.Cells[r, c]" />
+                    </td>
+                }
+            </tr>
+        }
+        </tbody>
+    </table>
+</div>
+
+@section Scripts {
+    <script>
+        const excelModel = {
+            sessionId: "@Model.SessionId",
+            sheetName: "@Model.SheetName",
+            userName: "user-" + Math.floor(Math.random() * 10000)
+        };
+    </script>
+    <script src="~/js/excel-realtime.js"></script>
+}
+
+@functions {
+    private static string GetColumnName(int column)
+    {
+        string col = string.Empty;
+        int dividend = column;
+        while (dividend > 0)
+        {
+            int modulo = (dividend - 1) % 26;
+            col = Convert.ToChar('A' + modulo) + col;
+            dividend = (dividend - modulo) / 26;
+        }
+        return col;
+    }
+}

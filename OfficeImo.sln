@@ -144,7 +144,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OfficeIMO.Markdown", "Offic
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OfficeIMO.Pdf", "OfficeIMO.Pdf\OfficeIMO.Pdf.csproj", "{CBE71378-A331-4DF3-A929-2721A07EC4C7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineOffice.Web", "..\onlineOfiice_OnlineOffice.Web\OnlineOffice.Web\OnlineOffice.Web.csproj", "{BCA5FE70-067C-4840-AB76-B51151251F43}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineOffice.Web", "OnlineOffice.Web\OnlineOffice.Web.csproj", "{BCA5FE70-067C-4840-AB76-B51151251F43}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
