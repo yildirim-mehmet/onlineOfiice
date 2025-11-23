@@ -1,0 +1,10 @@
+@model string
+@{
+    ViewBag.Title = "Word Görüntüleme";
+}
+
+<h2>Word Dosyası: @ViewBag.OriginalName</h2>
+
+<div class="viewer-panel">
+    @Html.Raw(Model)
+</div>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewBag.Title - OnlineOfficeWeb</title>
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <header class="top-bar">
+        <div class="container">
+            <h1 class="logo">OnlineOfficeWeb</h1>
+            <nav>
+                <a href="@Url.Action("Index", "Home")">Dosya Yükle</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container main-content">
+        @RenderBody()
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <span>&copy; @DateTime.Now.Year - OnlineOfficeWeb - OfficeIMO Entegrasyonu için başlangıç projesi</span>
+        </div>
+    </footer>
+
+    <script src="~/js/site.js"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

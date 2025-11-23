@@ -1,0 +1,6 @@
+
+@model List<string>
+<h2>@ViewBag.OriginalName</h2>
+@foreach (var img in Model) {
+    <img src="@img" style="width:600px"/>
+}

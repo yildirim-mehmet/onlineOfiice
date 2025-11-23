@@ -1,0 +1,54 @@
+﻿@model OnlineOfficeWeb.Models.PowerPointStructureModel
+
+<h2>PPTX Yapı Çıkarımı</h2>
+
+<h4>@Model.FileName</h4>
+
+@foreach (var slide in Model.Slides)
+{
+    <div class="card mb-3">
+        <div class="card-header bg-primary text-white">
+            <strong>Slayt @slide.Index</strong> – @slide.LayoutName
+        </div>
+
+        <div class="card-body">
+
+            <h5>Metin Kutuları</h5>
+            <ul>
+                @foreach (var t in slide.TextBoxes)
+                {
+                    <li>
+                        <strong>Text:</strong> @t.Text <br />
+                        <strong>Pos:</strong> L:@t.Left T:@t.Top W:@t.Width H:@t.Height <br />
+                        <strong>Font:</strong> @t.FontName @t.FontSize pt
+                        @(t.Bold ? "Bold" : "") @(t.Italic ? "Italic" : "")
+                        <span style="color:@("#"+t.ColorHex)">■</span>
+                    </li>
+                }
+            </ul>
+
+            <h5>Şekiller</h5>
+            <ul>
+                @foreach (var s in slide.Shapes)
+                {
+                    <li>
+                        <strong>@s.ShapeType</strong>
+                        (L:@s.Left, T:@s.Top, W:@s.Width, H:@s.Height)
+                    </li>
+                }
+            </ul>
+
+            <h5>Resimler</h5>
+            <ul>
+                @foreach (var p in slide.Pictures)
+                {
+                    <li>
+                        <strong>@p.FileName</strong> (@p.ImageType) –
+                        (L:@p.Left, T:@p.Top, W:@p.Width, H:@p.Height)
+                    </li>
+                }
+            </ul>
+
+        </div>
+    </div>
+}

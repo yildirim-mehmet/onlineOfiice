@@ -1,0 +1,24 @@
+@model OnlineOfficeWeb.Services.ExcelWorkbookDto
+
+@foreach (var sheet in Model.Sheets)
+{
+    <h3>@sheet.Name</h3>
+    <table class="table table-bordered table-sm">
+        <tbody>
+            @{
+                var grouped = sheet.Cells
+                .GroupBy(c => c.Row)
+                .OrderBy(g => g.Key);
+            }
+            @foreach (var row in grouped)
+            {
+                <tr>
+                    @foreach (var cell in row.OrderBy(c => c.Column))
+                    {
+                        <td>@cell.Text</td>
+                    }
+                </tr>
+            }
+        </tbody>
+    </table>
+}

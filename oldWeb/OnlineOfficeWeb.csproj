@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <!--
+    OfficeIMO paket referansları buraya eklenecek.
+    Örnek (versiyonları kendi solution'ına göre güncelle):
+    <ItemGroup>
+      <PackageReference Include="OfficeIMO.Word" Version="x.y.z" />
+      <PackageReference Include="OfficeIMO.Excel" Version="x.y.z" />
+      <PackageReference Include="OfficeIMO.PowerPoint" Version="x.y.z" />
+      <PackageReference Include="OfficeIMO.Pdf" Version="x.y.z" />
+    </ItemGroup>
+  -->
+</Project>

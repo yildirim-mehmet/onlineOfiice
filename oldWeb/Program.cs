@@ -1,21 +1,35 @@
-
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
-using OnlineOfficeWeb.Services;
+using Microsoft.Extensions.Hosting;
 
 var builder = WebApplication.CreateBuilder(args);
+
 builder.Services.AddControllersWithViews();
 
-builder.Services.AddScoped<OnlineOfficeWeb.Services.ExcelRenderService>();
+// Bizim servisler
 builder.Services.AddScoped<OnlineOfficeWeb.Services.WordRenderService>();
-builder.Services.AddScoped<OnlineOfficeWeb.Services.PowerPointRenderService>();
+builder.Services.AddScoped<OnlineOfficeWeb.Services.ExcelRenderService>();
 builder.Services.AddScoped<OnlineOfficeWeb.Services.PdfRenderService>();
+builder.Services.AddScoped<OnlineOfficeWeb.Services.PptRenderService>();
 builder.Services.AddScoped<OnlineOfficeWeb.Services.VisioRenderService>();
-builder.Services.AddSingleton<PowerPointStructureService>();
-
 
 var app = builder.Build();
+
+if (!app.Environment.IsDevelopment())
+{
+    app.UseExceptionHandler("/Home/Error");
+    app.UseHsts();
+}
+
+app.UseHttpsRedirection();
 app.UseStaticFiles();
+
 app.UseRouting();
-app.MapDefaultControllerRoute();
+
+app.UseAuthorization();
+
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=Home}/{action=Index}/{id?}");
+
 app.Run();

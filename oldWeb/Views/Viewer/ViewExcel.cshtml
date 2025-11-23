@@ -1,0 +1,30 @@
+@model OnlineOfficeWeb.Services.ExcelWorkbookDto
+@{
+    ViewBag.Title = "Excel Görüntüleme";
+}
+
+<h2>Excel Dosyası: @ViewBag.OriginalName</h2>
+
+@foreach (var sheet in Model.Sheets)
+{
+    <h3>@sheet.Name</h3>
+    <table class="excel-table">
+        <thead>
+            <tr>
+                <th>Satır</th>
+                <th>Sütun</th>
+                <th>Değer</th>
+            </tr>
+        </thead>
+        <tbody>
+        @foreach (var cell in sheet.Cells)
+        {
+            <tr>
+                <td>@cell.Row</td>
+                <td>@cell.Column</td>
+                <td>@cell.Text</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+}

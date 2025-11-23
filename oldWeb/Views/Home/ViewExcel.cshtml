@@ -1,0 +1,36 @@
+@model List<List<string>>
+@{
+    var docId = ViewBag.DocId as string ?? "";
+    var sheetName = ViewBag.SheetName as string ?? "";
+}
+
+<h3>Excel Görüntüleme: @sheetName</h3>
+<p style="font-size:0.85rem; color:#666;">Belge ID: @docId</p>
+
+@if (!Model.Any())
+{
+    <p>Sayfada veri bulunamadı.</p>
+}
+else
+{
+    <table>
+        <tbody>
+        @for (int r = 0; r < Model.Count; r++)
+        {
+            <tr>
+                @for (int c = 0; c < Model[r].Count; c++)
+                {
+                    if (r == 0)
+                    {
+                        <th>@Model[r][c]</th>
+                    }
+                    else
+                    {
+                        <td>@Model[r][c]</td>
+                    }
+                }
+            </tr>
+        }
+        </tbody>
+    </table>
+}

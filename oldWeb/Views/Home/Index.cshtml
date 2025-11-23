@@ -1,0 +1,25 @@
+@{
+    ViewBag.Title = "Dosya Yükle";
+}
+
+<h2>Dosya Yükle</h2>
+
+<p>
+    Bu ekrandan Word, Excel, PowerPoint, PDF ve Visio dosyalarını yükleyip
+    bir sonraki adımda OfficeIMO ile görüntüleyip düzenleyeceğiz.
+</p>
+
+@if (ViewBag.Error != null)
+{
+    <div class="alert alert-error">
+        @ViewBag.Error
+    </div>
+}
+
+<form asp-action="Index" asp-controller="Home" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+        <label for="file">Dosya Seçin:</label>
+        <input type="file" name="file" id="file" />
+    </div>
+    <button type="submit" class="btn">Yükle ve Göster</button>
+</form>

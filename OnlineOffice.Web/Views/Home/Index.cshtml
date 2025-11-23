@@ -1,12 +1,6 @@
-@{
-    ViewData["Title"] = "Ana Sayfa";
-}
 
-<div class="text-center">
-    <h1 class="display-5">OnlineOffice - OfficeIMO & SignalR Demo</h1>
-    <p class="lead">Excel dosyanızı yükleyin, tarayıcı üzerinden çok kullanıcılı olarak düzenleyin.</p>
-
-    <a class="btn btn-primary btn-lg" asp-controller="Excel" asp-action="Upload">
-        Excel Yükle ve Düzenlemeye Başla
-    </a>
-</div>
+<h2>Dosya Yükle</h2>
+<form method="post" enctype="multipart/form-data">
+    <input type="file" name="file"/>
+    <button type="submit">Yükle</button>
+</form>
