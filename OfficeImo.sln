@@ -1,0 +1,327 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32014.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OfficeIMO.Word", "OfficeIMO.Word\OfficeIMO.Word.csproj", "{FDCF73EE-953A-4063-AFA1-C6C395C8B9CD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OfficeIMO.Examples", "OfficeIMO.Examples\OfficeIMO.Examples.csproj", "{B437E21F-3A63-45C3-9098-7BA302AB7301}"
+	ProjectSection(ProjectDependencies) = postProject
+		{FDCF73EE-953A-4063-AFA1-C6C395C8B9CD} = {FDCF73EE-953A-4063-AFA1-C6C395C8B9CD}
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OfficeIMO.Tests", "OfficeIMO.Tests\OfficeIMO.Tests.csproj", "{CC1AF4F4-1BA1-4639-8434-09E3F543DB09}"
+	ProjectSection(ProjectDependencies) = postProject
+		{80B77D75-D25C-4168-B6A3-FA58DB118EF8} = {80B77D75-D25C-4168-B6A3-FA58DB118EF8}
+		{FDCF73EE-953A-4063-AFA1-C6C395C8B9CD} = {FDCF73EE-953A-4063-AFA1-C6C395C8B9CD}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{180EED7F-C628-4AC2-A7D0-530B6C537C2C}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+		azure-pipelines.yml = azure-pipelines.yml
+		CHANGELOG.MD = CHANGELOG.MD
+		CodeCoverage.runsettings = CodeCoverage.runsettings
+		Directory.Build.props = Directory.Build.props
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OfficeIMO.Excel", "OfficeIMO.Excel\OfficeIMO.Excel.csproj", "{80B77D75-D25C-4168-B6A3-FA58DB118EF8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OfficeIMO.VerifyTests", "OfficeIMO.VerifyTests\OfficeIMO.VerifyTests.csproj", "{91F78177-72D4-429C-A29E-1B28B37F7BC6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OfficeIMO.Word.Pdf", "OfficeIMO.Word.Pdf\OfficeIMO.Word.Pdf.csproj", "{9D9952F0-776C-4E1D-BD5F-9D9FB3924633}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{5A10AB86-32EA-42AE-A029-222CCE1E282C}"
+	ProjectSection(SolutionItems) = preProject
+		Docs\index.md = Docs\index.md
+		Docs\officeimo.word.applicationproperties.md = Docs\officeimo.word.applicationproperties.md
+		Docs\officeimo.word.builtindocumentproperties.md = Docs\officeimo.word.builtindocumentproperties.md
+		Docs\officeimo.word.capsstyle.md = Docs\officeimo.word.capsstyle.md
+		Docs\officeimo.word.coverpagetemplate.md = Docs\officeimo.word.coverpagetemplate.md
+		Docs\officeimo.word.customliststyle.md = Docs\officeimo.word.customliststyle.md
+		Docs\officeimo.word.customliststyles.md = Docs\officeimo.word.customliststyles.md
+		Docs\officeimo.word.helpers.md = Docs\officeimo.word.helpers.md
+		Docs\officeimo.word.imageformatnotsupportedexception.md = Docs\officeimo.word.imageformatnotsupportedexception.md
+		Docs\officeimo.word.officeimoexception.md = Docs\officeimo.word.officeimoexception.md
+		Docs\officeimo.word.propertytypes.md = Docs\officeimo.word.propertytypes.md
+		Docs\officeimo.word.tableofcontentstyle.md = Docs\officeimo.word.tableofcontentstyle.md
+		Docs\officeimo.word.targetframe.md = Docs\officeimo.word.targetframe.md
+		Docs\officeimo.word.wordbackground.md = Docs\officeimo.word.wordbackground.md
+		Docs\officeimo.word.wordbarchart.md = Docs\officeimo.word.wordbarchart.md
+		Docs\officeimo.word.wordbarchart3d.md = Docs\officeimo.word.wordbarchart3d.md
+		Docs\officeimo.word.wordbookmark.md = Docs\officeimo.word.wordbookmark.md
+		Docs\officeimo.word.wordborder.md = Docs\officeimo.word.wordborder.md
+		Docs\officeimo.word.wordborders.md = Docs\officeimo.word.wordborders.md
+		Docs\officeimo.word.wordbreak.md = Docs\officeimo.word.wordbreak.md
+		Docs\officeimo.word.wordcharacterstyle.md = Docs\officeimo.word.wordcharacterstyle.md
+		Docs\officeimo.word.wordcharacterstyles.md = Docs\officeimo.word.wordcharacterstyles.md
+		Docs\officeimo.word.wordcomment.md = Docs\officeimo.word.wordcomment.md
+		Docs\officeimo.word.wordcoverpage.md = Docs\officeimo.word.wordcoverpage.md
+		Docs\officeimo.word.wordcustomproperties.md = Docs\officeimo.word.wordcustomproperties.md
+		Docs\officeimo.word.wordcustomproperty.md = Docs\officeimo.word.wordcustomproperty.md
+		Docs\officeimo.word.wordequation.md = Docs\officeimo.word.wordequation.md
+		Docs\officeimo.word.wordfield.md = Docs\officeimo.word.wordfield.md
+		Docs\officeimo.word.wordfieldformat.md = Docs\officeimo.word.wordfieldformat.md
+		Docs\officeimo.word.wordfieldtype.md = Docs\officeimo.word.wordfieldtype.md
+		Docs\officeimo.word.wordfooters.md = Docs\officeimo.word.wordfooters.md
+		Docs\officeimo.word.wordheaderfooter.md = Docs\officeimo.word.wordheaderfooter.md
+		Docs\officeimo.word.wordheaders.md = Docs\officeimo.word.wordheaders.md
+		Docs\officeimo.word.wordhelpers.md = Docs\officeimo.word.wordhelpers.md
+		Docs\officeimo.word.wordhyperlink.md = Docs\officeimo.word.wordhyperlink.md
+		Docs\officeimo.word.wordimage.md = Docs\officeimo.word.wordimage.md
+		Docs\officeimo.word.wordlinechart.md = Docs\officeimo.word.wordlinechart.md
+		Docs\officeimo.word.wordlist.md = Docs\officeimo.word.wordlist.md
+		Docs\officeimo.word.wordliststyle.md = Docs\officeimo.word.wordliststyle.md
+		Docs\officeimo.word.wordliststyles.md = Docs\officeimo.word.wordliststyles.md
+		Docs\officeimo.word.wordmargin.md = Docs\officeimo.word.wordmargin.md
+		Docs\officeimo.word.wordmargins.md = Docs\officeimo.word.wordmargins.md
+		Docs\officeimo.word.wordpagebreak.md = Docs\officeimo.word.wordpagebreak.md
+		Docs\officeimo.word.wordpagenumber.md = Docs\officeimo.word.wordpagenumber.md
+		Docs\officeimo.word.wordpagenumberstyle.md = Docs\officeimo.word.wordpagenumberstyle.md
+		Docs\officeimo.word.wordpagesize.md = Docs\officeimo.word.wordpagesize.md
+		Docs\officeimo.word.wordpagesizes.md = Docs\officeimo.word.wordpagesizes.md
+		Docs\officeimo.word.wordparagraph.md = Docs\officeimo.word.wordparagraph.md
+		Docs\officeimo.word.wordparagraphstyle.md = Docs\officeimo.word.wordparagraphstyle.md
+		Docs\officeimo.word.wordparagraphstyles.md = Docs\officeimo.word.wordparagraphstyles.md
+		Docs\officeimo.word.wordpiechart.md = Docs\officeimo.word.wordpiechart.md
+		Docs\officeimo.word.wordsection.md = Docs\officeimo.word.wordsection.md
+		Docs\officeimo.word.wordsettings.md = Docs\officeimo.word.wordsettings.md
+		Docs\officeimo.word.wordstructureddocumenttag.md = Docs\officeimo.word.wordstructureddocumenttag.md
+		Docs\officeimo.word.wordtable.md = Docs\officeimo.word.wordtable.md
+		Docs\officeimo.word.wordtablecell.md = Docs\officeimo.word.wordtablecell.md
+		Docs\officeimo.word.wordtablecellborder.md = Docs\officeimo.word.wordtablecellborder.md
+		Docs\officeimo.word.wordtableofcontent.md = Docs\officeimo.word.wordtableofcontent.md
+		Docs\officeimo.word.wordtableposition.md = Docs\officeimo.word.wordtableposition.md
+		Docs\officeimo.word.wordtablerow.md = Docs\officeimo.word.wordtablerow.md
+		Docs\officeimo.word.wordtablestyle.md = Docs\officeimo.word.wordtablestyle.md
+		Docs\officeimo.word.wordtablestyles.md = Docs\officeimo.word.wordtablestyles.md
+		Docs\officeimo.word.wordwatermark.md = Docs\officeimo.word.wordwatermark.md
+		Docs\officeimo.word.wordwatermarkstyle.md = Docs\officeimo.word.wordwatermarkstyle.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Examples", "Examples", "{B261C012-2D98-485E-AD5D-BD4CB31EE7E4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ExamplesAddingHeadersAndFooters", "ExamplesAddingHeadersAndFooters", "{AF836F5B-8CAB-4AF4-AEEB-3C4E718D9AFD}"
+	ProjectSection(SolutionItems) = preProject
+		Docs\Examples\ExamplesAddingHeadersAndFooters\README.MD = Docs\Examples\ExamplesAddingHeadersAndFooters\README.MD
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ExamplesAddingTablesWithStylesAndBorders", "ExamplesAddingTablesWithStylesAndBorders", "{3265256C-A216-4CA9-8D5E-940FE94C4901}"
+	ProjectSection(SolutionItems) = preProject
+		Docs\Examples\ExamplesAddingTablesWithStylesAndBorders\AddingTablesWithStylesAndBorders.png = Docs\Examples\ExamplesAddingTablesWithStylesAndBorders\AddingTablesWithStylesAndBorders.png
+		Docs\Examples\ExamplesAddingTablesWithStylesAndBorders\README.MD = Docs\Examples\ExamplesAddingTablesWithStylesAndBorders\README.MD
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{CA6E8F53-622F-4D80-8EB3-EEC9D1B91718}"
+	ProjectSection(SolutionItems) = preProject
+		Build\approve-all.ps1 = Build\approve-all.ps1
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Assets", "Assets", "{F5B007BB-DF10-4E60-9B1B-D9F58B4422F9}"
+	ProjectSection(SolutionItems) = preProject
+		Assets\OfficeIMO.ico = Assets\OfficeIMO.ico
+		Assets\OfficeIMO.png = Assets\OfficeIMO.png
+		Assets\README.MD = Assets\README.MD
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{D54570C8-E903-4A61-BB37-06F8E4BD0711}"
+	ProjectSection(SolutionItems) = preProject
+		.github\FUNDING.yml = .github\FUNDING.yml
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OfficeIMO.Word.Html", "OfficeIMO.Word.Html\OfficeIMO.Word.Html.csproj", "{1FAE812D-A40C-4AD2-98FD-69DAA91A41DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OfficeIMO.Word.Markdown", "OfficeIMO.Word.Markdown\OfficeIMO.Word.Markdown.csproj", "{9C2CC069-324D-4B80-88D2-1E3F49FB2C19}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OfficeIMO.Visio", "OfficeIMO.Visio\OfficeIMO.Visio.csproj", "{42E46CA9-CB23-446A-8D48-07E04E88A65C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OfficeIMO.PowerPoint", "OfficeIMO.PowerPoint\OfficeIMO.PowerPoint.csproj", "{9D44566A-6053-4D84-917D-658E3CF75ED8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OfficeIMO.Markdown", "OfficeIMO.Markdown\OfficeIMO.Markdown.csproj", "{D8EEC8AF-DA25-48A8-8B26-750CE2C09BA5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OfficeIMO.Pdf", "OfficeIMO.Pdf\OfficeIMO.Pdf.csproj", "{CBE71378-A331-4DF3-A929-2721A07EC4C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineOffice.Web", "..\onlineOfiice_OnlineOffice.Web\OnlineOffice.Web\OnlineOffice.Web.csproj", "{BCA5FE70-067C-4840-AB76-B51151251F43}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FDCF73EE-953A-4063-AFA1-C6C395C8B9CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDCF73EE-953A-4063-AFA1-C6C395C8B9CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDCF73EE-953A-4063-AFA1-C6C395C8B9CD}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{FDCF73EE-953A-4063-AFA1-C6C395C8B9CD}.Debug|x64.Build.0 = Debug|Any CPU
+		{FDCF73EE-953A-4063-AFA1-C6C395C8B9CD}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{FDCF73EE-953A-4063-AFA1-C6C395C8B9CD}.Debug|x86.Build.0 = Debug|Any CPU
+		{FDCF73EE-953A-4063-AFA1-C6C395C8B9CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDCF73EE-953A-4063-AFA1-C6C395C8B9CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDCF73EE-953A-4063-AFA1-C6C395C8B9CD}.Release|x64.ActiveCfg = Release|Any CPU
+		{FDCF73EE-953A-4063-AFA1-C6C395C8B9CD}.Release|x64.Build.0 = Release|Any CPU
+		{FDCF73EE-953A-4063-AFA1-C6C395C8B9CD}.Release|x86.ActiveCfg = Release|Any CPU
+		{FDCF73EE-953A-4063-AFA1-C6C395C8B9CD}.Release|x86.Build.0 = Release|Any CPU
+		{B437E21F-3A63-45C3-9098-7BA302AB7301}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B437E21F-3A63-45C3-9098-7BA302AB7301}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B437E21F-3A63-45C3-9098-7BA302AB7301}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{B437E21F-3A63-45C3-9098-7BA302AB7301}.Debug|x64.Build.0 = Debug|Any CPU
+		{B437E21F-3A63-45C3-9098-7BA302AB7301}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B437E21F-3A63-45C3-9098-7BA302AB7301}.Debug|x86.Build.0 = Debug|Any CPU
+		{B437E21F-3A63-45C3-9098-7BA302AB7301}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B437E21F-3A63-45C3-9098-7BA302AB7301}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B437E21F-3A63-45C3-9098-7BA302AB7301}.Release|x64.ActiveCfg = Release|Any CPU
+		{B437E21F-3A63-45C3-9098-7BA302AB7301}.Release|x64.Build.0 = Release|Any CPU
+		{B437E21F-3A63-45C3-9098-7BA302AB7301}.Release|x86.ActiveCfg = Release|Any CPU
+		{B437E21F-3A63-45C3-9098-7BA302AB7301}.Release|x86.Build.0 = Release|Any CPU
+		{CC1AF4F4-1BA1-4639-8434-09E3F543DB09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC1AF4F4-1BA1-4639-8434-09E3F543DB09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC1AF4F4-1BA1-4639-8434-09E3F543DB09}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{CC1AF4F4-1BA1-4639-8434-09E3F543DB09}.Debug|x64.Build.0 = Debug|Any CPU
+		{CC1AF4F4-1BA1-4639-8434-09E3F543DB09}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{CC1AF4F4-1BA1-4639-8434-09E3F543DB09}.Debug|x86.Build.0 = Debug|Any CPU
+		{CC1AF4F4-1BA1-4639-8434-09E3F543DB09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC1AF4F4-1BA1-4639-8434-09E3F543DB09}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC1AF4F4-1BA1-4639-8434-09E3F543DB09}.Release|x64.ActiveCfg = Release|Any CPU
+		{CC1AF4F4-1BA1-4639-8434-09E3F543DB09}.Release|x64.Build.0 = Release|Any CPU
+		{CC1AF4F4-1BA1-4639-8434-09E3F543DB09}.Release|x86.ActiveCfg = Release|Any CPU
+		{CC1AF4F4-1BA1-4639-8434-09E3F543DB09}.Release|x86.Build.0 = Release|Any CPU
+		{80B77D75-D25C-4168-B6A3-FA58DB118EF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80B77D75-D25C-4168-B6A3-FA58DB118EF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80B77D75-D25C-4168-B6A3-FA58DB118EF8}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{80B77D75-D25C-4168-B6A3-FA58DB118EF8}.Debug|x64.Build.0 = Debug|Any CPU
+		{80B77D75-D25C-4168-B6A3-FA58DB118EF8}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{80B77D75-D25C-4168-B6A3-FA58DB118EF8}.Debug|x86.Build.0 = Debug|Any CPU
+		{80B77D75-D25C-4168-B6A3-FA58DB118EF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80B77D75-D25C-4168-B6A3-FA58DB118EF8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80B77D75-D25C-4168-B6A3-FA58DB118EF8}.Release|x64.ActiveCfg = Release|Any CPU
+		{80B77D75-D25C-4168-B6A3-FA58DB118EF8}.Release|x64.Build.0 = Release|Any CPU
+		{80B77D75-D25C-4168-B6A3-FA58DB118EF8}.Release|x86.ActiveCfg = Release|Any CPU
+		{80B77D75-D25C-4168-B6A3-FA58DB118EF8}.Release|x86.Build.0 = Release|Any CPU
+		{91F78177-72D4-429C-A29E-1B28B37F7BC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91F78177-72D4-429C-A29E-1B28B37F7BC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91F78177-72D4-429C-A29E-1B28B37F7BC6}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{91F78177-72D4-429C-A29E-1B28B37F7BC6}.Debug|x64.Build.0 = Debug|Any CPU
+		{91F78177-72D4-429C-A29E-1B28B37F7BC6}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{91F78177-72D4-429C-A29E-1B28B37F7BC6}.Debug|x86.Build.0 = Debug|Any CPU
+		{91F78177-72D4-429C-A29E-1B28B37F7BC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91F78177-72D4-429C-A29E-1B28B37F7BC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91F78177-72D4-429C-A29E-1B28B37F7BC6}.Release|x64.ActiveCfg = Release|Any CPU
+		{91F78177-72D4-429C-A29E-1B28B37F7BC6}.Release|x64.Build.0 = Release|Any CPU
+		{91F78177-72D4-429C-A29E-1B28B37F7BC6}.Release|x86.ActiveCfg = Release|Any CPU
+		{91F78177-72D4-429C-A29E-1B28B37F7BC6}.Release|x86.Build.0 = Release|Any CPU
+		{9D9952F0-776C-4E1D-BD5F-9D9FB3924633}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D9952F0-776C-4E1D-BD5F-9D9FB3924633}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D9952F0-776C-4E1D-BD5F-9D9FB3924633}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{9D9952F0-776C-4E1D-BD5F-9D9FB3924633}.Debug|x64.Build.0 = Debug|Any CPU
+		{9D9952F0-776C-4E1D-BD5F-9D9FB3924633}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{9D9952F0-776C-4E1D-BD5F-9D9FB3924633}.Debug|x86.Build.0 = Debug|Any CPU
+		{9D9952F0-776C-4E1D-BD5F-9D9FB3924633}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D9952F0-776C-4E1D-BD5F-9D9FB3924633}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D9952F0-776C-4E1D-BD5F-9D9FB3924633}.Release|x64.ActiveCfg = Release|Any CPU
+		{9D9952F0-776C-4E1D-BD5F-9D9FB3924633}.Release|x64.Build.0 = Release|Any CPU
+		{9D9952F0-776C-4E1D-BD5F-9D9FB3924633}.Release|x86.ActiveCfg = Release|Any CPU
+		{9D9952F0-776C-4E1D-BD5F-9D9FB3924633}.Release|x86.Build.0 = Release|Any CPU
+		{1FAE812D-A40C-4AD2-98FD-69DAA91A41DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FAE812D-A40C-4AD2-98FD-69DAA91A41DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FAE812D-A40C-4AD2-98FD-69DAA91A41DC}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{1FAE812D-A40C-4AD2-98FD-69DAA91A41DC}.Debug|x64.Build.0 = Debug|Any CPU
+		{1FAE812D-A40C-4AD2-98FD-69DAA91A41DC}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{1FAE812D-A40C-4AD2-98FD-69DAA91A41DC}.Debug|x86.Build.0 = Debug|Any CPU
+		{1FAE812D-A40C-4AD2-98FD-69DAA91A41DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FAE812D-A40C-4AD2-98FD-69DAA91A41DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1FAE812D-A40C-4AD2-98FD-69DAA91A41DC}.Release|x64.ActiveCfg = Release|Any CPU
+		{1FAE812D-A40C-4AD2-98FD-69DAA91A41DC}.Release|x64.Build.0 = Release|Any CPU
+		{1FAE812D-A40C-4AD2-98FD-69DAA91A41DC}.Release|x86.ActiveCfg = Release|Any CPU
+		{1FAE812D-A40C-4AD2-98FD-69DAA91A41DC}.Release|x86.Build.0 = Release|Any CPU
+		{9C2CC069-324D-4B80-88D2-1E3F49FB2C19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C2CC069-324D-4B80-88D2-1E3F49FB2C19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C2CC069-324D-4B80-88D2-1E3F49FB2C19}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{9C2CC069-324D-4B80-88D2-1E3F49FB2C19}.Debug|x64.Build.0 = Debug|Any CPU
+		{9C2CC069-324D-4B80-88D2-1E3F49FB2C19}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{9C2CC069-324D-4B80-88D2-1E3F49FB2C19}.Debug|x86.Build.0 = Debug|Any CPU
+		{9C2CC069-324D-4B80-88D2-1E3F49FB2C19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C2CC069-324D-4B80-88D2-1E3F49FB2C19}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C2CC069-324D-4B80-88D2-1E3F49FB2C19}.Release|x64.ActiveCfg = Release|Any CPU
+		{9C2CC069-324D-4B80-88D2-1E3F49FB2C19}.Release|x64.Build.0 = Release|Any CPU
+		{9C2CC069-324D-4B80-88D2-1E3F49FB2C19}.Release|x86.ActiveCfg = Release|Any CPU
+		{9C2CC069-324D-4B80-88D2-1E3F49FB2C19}.Release|x86.Build.0 = Release|Any CPU
+		{42E46CA9-CB23-446A-8D48-07E04E88A65C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42E46CA9-CB23-446A-8D48-07E04E88A65C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42E46CA9-CB23-446A-8D48-07E04E88A65C}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{42E46CA9-CB23-446A-8D48-07E04E88A65C}.Debug|x64.Build.0 = Debug|Any CPU
+		{42E46CA9-CB23-446A-8D48-07E04E88A65C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{42E46CA9-CB23-446A-8D48-07E04E88A65C}.Debug|x86.Build.0 = Debug|Any CPU
+		{42E46CA9-CB23-446A-8D48-07E04E88A65C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42E46CA9-CB23-446A-8D48-07E04E88A65C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42E46CA9-CB23-446A-8D48-07E04E88A65C}.Release|x64.ActiveCfg = Release|Any CPU
+		{42E46CA9-CB23-446A-8D48-07E04E88A65C}.Release|x64.Build.0 = Release|Any CPU
+		{42E46CA9-CB23-446A-8D48-07E04E88A65C}.Release|x86.ActiveCfg = Release|Any CPU
+		{42E46CA9-CB23-446A-8D48-07E04E88A65C}.Release|x86.Build.0 = Release|Any CPU
+		{9D44566A-6053-4D84-917D-658E3CF75ED8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D44566A-6053-4D84-917D-658E3CF75ED8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D44566A-6053-4D84-917D-658E3CF75ED8}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{9D44566A-6053-4D84-917D-658E3CF75ED8}.Debug|x64.Build.0 = Debug|Any CPU
+		{9D44566A-6053-4D84-917D-658E3CF75ED8}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{9D44566A-6053-4D84-917D-658E3CF75ED8}.Debug|x86.Build.0 = Debug|Any CPU
+		{9D44566A-6053-4D84-917D-658E3CF75ED8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D44566A-6053-4D84-917D-658E3CF75ED8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D44566A-6053-4D84-917D-658E3CF75ED8}.Release|x64.ActiveCfg = Release|Any CPU
+		{9D44566A-6053-4D84-917D-658E3CF75ED8}.Release|x64.Build.0 = Release|Any CPU
+		{9D44566A-6053-4D84-917D-658E3CF75ED8}.Release|x86.ActiveCfg = Release|Any CPU
+		{9D44566A-6053-4D84-917D-658E3CF75ED8}.Release|x86.Build.0 = Release|Any CPU
+		{D8EEC8AF-DA25-48A8-8B26-750CE2C09BA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8EEC8AF-DA25-48A8-8B26-750CE2C09BA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8EEC8AF-DA25-48A8-8B26-750CE2C09BA5}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{D8EEC8AF-DA25-48A8-8B26-750CE2C09BA5}.Debug|x64.Build.0 = Debug|Any CPU
+		{D8EEC8AF-DA25-48A8-8B26-750CE2C09BA5}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D8EEC8AF-DA25-48A8-8B26-750CE2C09BA5}.Debug|x86.Build.0 = Debug|Any CPU
+		{D8EEC8AF-DA25-48A8-8B26-750CE2C09BA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8EEC8AF-DA25-48A8-8B26-750CE2C09BA5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8EEC8AF-DA25-48A8-8B26-750CE2C09BA5}.Release|x64.ActiveCfg = Release|Any CPU
+		{D8EEC8AF-DA25-48A8-8B26-750CE2C09BA5}.Release|x64.Build.0 = Release|Any CPU
+		{D8EEC8AF-DA25-48A8-8B26-750CE2C09BA5}.Release|x86.ActiveCfg = Release|Any CPU
+		{D8EEC8AF-DA25-48A8-8B26-750CE2C09BA5}.Release|x86.Build.0 = Release|Any CPU
+		{CBE71378-A331-4DF3-A929-2721A07EC4C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBE71378-A331-4DF3-A929-2721A07EC4C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBE71378-A331-4DF3-A929-2721A07EC4C7}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{CBE71378-A331-4DF3-A929-2721A07EC4C7}.Debug|x64.Build.0 = Debug|Any CPU
+		{CBE71378-A331-4DF3-A929-2721A07EC4C7}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{CBE71378-A331-4DF3-A929-2721A07EC4C7}.Debug|x86.Build.0 = Debug|Any CPU
+		{CBE71378-A331-4DF3-A929-2721A07EC4C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBE71378-A331-4DF3-A929-2721A07EC4C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CBE71378-A331-4DF3-A929-2721A07EC4C7}.Release|x64.ActiveCfg = Release|Any CPU
+		{CBE71378-A331-4DF3-A929-2721A07EC4C7}.Release|x64.Build.0 = Release|Any CPU
+		{CBE71378-A331-4DF3-A929-2721A07EC4C7}.Release|x86.ActiveCfg = Release|Any CPU
+		{CBE71378-A331-4DF3-A929-2721A07EC4C7}.Release|x86.Build.0 = Release|Any CPU
+		{BCA5FE70-067C-4840-AB76-B51151251F43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCA5FE70-067C-4840-AB76-B51151251F43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCA5FE70-067C-4840-AB76-B51151251F43}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{BCA5FE70-067C-4840-AB76-B51151251F43}.Debug|x64.Build.0 = Debug|Any CPU
+		{BCA5FE70-067C-4840-AB76-B51151251F43}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{BCA5FE70-067C-4840-AB76-B51151251F43}.Debug|x86.Build.0 = Debug|Any CPU
+		{BCA5FE70-067C-4840-AB76-B51151251F43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCA5FE70-067C-4840-AB76-B51151251F43}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCA5FE70-067C-4840-AB76-B51151251F43}.Release|x64.ActiveCfg = Release|Any CPU
+		{BCA5FE70-067C-4840-AB76-B51151251F43}.Release|x64.Build.0 = Release|Any CPU
+		{BCA5FE70-067C-4840-AB76-B51151251F43}.Release|x86.ActiveCfg = Release|Any CPU
+		{BCA5FE70-067C-4840-AB76-B51151251F43}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B261C012-2D98-485E-AD5D-BD4CB31EE7E4} = {5A10AB86-32EA-42AE-A029-222CCE1E282C}
+		{AF836F5B-8CAB-4AF4-AEEB-3C4E718D9AFD} = {B261C012-2D98-485E-AD5D-BD4CB31EE7E4}
+		{3265256C-A216-4CA9-8D5E-940FE94C4901} = {B261C012-2D98-485E-AD5D-BD4CB31EE7E4}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DAC88AB0-9011-4EED-A7F3-F9E8C5958DBF}
+	EndGlobalSection
+EndGlobal
